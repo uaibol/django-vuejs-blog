@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="bg-light p-5 rounded">
+    
+
+      <h1>Django Blog Tutorial</h1>
+      <p class="lead">A Simple Blog App Using Django-2.2 for back-end and Vue.js for front-end.</p>
+      {% if user.is_authenticated %}
+        <p class="lead">Hi {{ user.username }}!</p>
+        {% else %}
+        <p class="lead">You are not logged in</p>
+       {% endif %}
+      <a class="btn btn-lg btn-primary" href="http://djangoproject.com" role="button">
+          View more &raquo;</a>
+    </div>
+{% endblock %}
